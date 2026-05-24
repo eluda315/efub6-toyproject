@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: delta
+
+  sql:
+    init:
+      mode: always
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/tweeter?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+    username: root
+    password: 'admin1234'
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
